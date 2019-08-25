@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.allattentionhere.autoplayvideos.AAH_VideoImage
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/post_image_friends"
+        android:layout_centerInParent="true" />
+
+    <com.allattentionhere.autoplayvideos.AAH_CustomVideoView
+        android:id="@+id/post_video_friends"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp" />
+
+    <ImageView
+        android:id="@+id/video_sound"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_margin="15dp"
+        android:layout_alignBottom="@+id/post_video_friends"
+        android:layout_alignEnd="@+id/post_video_friends"
+        android:src="@drawable/on_sound" />
+
+</RelativeLayout>

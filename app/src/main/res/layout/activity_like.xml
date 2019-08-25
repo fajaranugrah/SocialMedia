@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/content"
+    tools:context="com.android.socialmedia.NavigationBottom.Activity.ActivityUser">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tabLayout_like"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorNav"
+        app:tabTextColor="@android:color/background_light">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager_like"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabLayout_like"
+        android:layout_above="@+id/bottombar_like">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <!-- bottom navigation -->
+    <!--create gone-->
+    <include
+        android:id="@+id/bottombar_like"
+        layout="@layout/layout_bottombar_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

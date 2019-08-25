@@ -1,0 +1,99 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lighter_gray"
+    android:orientation="vertical"
+    android:id="@+id/content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:background="@color/white"
+            app:titleTextColor="@color/colorNav">
+
+            <include
+                android:id="@+id/toolbar_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/toolbar_home_fragment"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:layout_above="@+id/bottombar_home">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeContainerHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/separator"/>
+
+                        <RelativeLayout
+                            android:id="@+id/story_friends_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:padding="5dp">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/story_home"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/separator_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/separator"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/post_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                        <!--<com.allattentionhere.autoplayvideos.AAH_CustomRecyclerView
+                            android:id="@+id/post_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />-->
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+
+        <!-- bottom navigation -->
+        <include
+            android:id="@+id/bottombar_home"
+            layout="@layout/layout_bottombar_navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+</FrameLayout>

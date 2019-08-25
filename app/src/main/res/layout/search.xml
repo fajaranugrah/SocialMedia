@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="4dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/search_image"
+            android:layout_centerInParent="true"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:scaleType="fitXY"/>
+
+        <com.allattentionhere.autoplayvideos.AAH_CustomVideoView
+            android:id="@+id/search_video"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/video_sound"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="15dp"
+            android:layout_alignBottom="@+id/search_video"
+            android:layout_alignEnd="@+id/search_video"
+            android:src="@drawable/on_sound" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
