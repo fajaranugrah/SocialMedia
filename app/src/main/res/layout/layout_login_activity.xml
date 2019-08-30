@@ -28,6 +28,7 @@
             android:layout_marginLeft="20dp"
             android:background="@drawable/curve_transparent"
             app:passwordToggleEnabled="true"
+            app:hintEnabled="false"
             app:passwordToggleTint="@color/gray">
 
         <com.google.android.material.textfield.TextInputEditText
